@@ -14,6 +14,21 @@ class Player(pygame.sprite.Sprite):
 
     def create_bullet(self):
         return Bullet(pygame.mouse.get_pos()[0],pygame.mouse.get_pos()[1])
+#This Enemy
+#class Enemey(ship):
+    #def __init__(self, x, y):
+        #super().__init__(x, y,)
+        #self.image = pygame.surface((20,20))
+        #self.image.fill((255,0,0))
+    #Enemy move
+    #def move(self):
+        #self.y += 1
+#Spawn Enemy
+#while run:
+    #clock.tick(FPS)
+
+    #enemy = Enemy(random.randrange(50, WIDTH-100), random.randrange(-1500, -100)
+    
 
 #This create Bullet
 class Bullet(pygame.sprite.Sprite):
