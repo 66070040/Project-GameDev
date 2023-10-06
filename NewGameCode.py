@@ -118,3 +118,87 @@ def game_loop():
 
       else:
           pygame.draw.rect(gameDisplay, darkgreen,(450, 375, 100, 50))
+
+    if left_clicked == False and mouse_pressed[0] == 1:
+        left_clicked = True
+    elif left_clicked == True and mouse_pressed[0] == 0:
+        left_clicked = False
+
+    smallText = pygame.font.Font('freesansbold.ttf', 20)
+    TextSurf, TextRect = text_objects("EASY", smallText)
+    TextRect.center = ((200),(200))
+    gameDisplay.blit(TextSurf, TextRect)
+
+    smallText = pygame.font.Font('freesansbold.ttf', 20)
+    TextSurf, TextRect = text_objects("NORMAL", smallText)
+    TextRect.center = ((400),(200))
+    gameDisplay.blit(TextSurf, TextRect)
+
+    smallText = pygame.font.Font('freesansbold.ttf', 20)
+    TextSurf, TextRect = text_objects("Hard", smallText)
+    TextRect.center = ((600),(200))
+    gameDisplay.blit(TextSurf, TextRect)
+
+    smallText = pygame.font.Font('freesansbold.ttf', 20)
+    TextSurf, TextRect = text_objects("VERY HARD", smallText)
+    TextRect.center = ((300),(400))
+    gameDisplay.blit(TextSurf, TextRect)
+
+    smallText = pygame.font.Font('freesansbold.ttf', 20)
+    TextSurf, TextRect = text_objects("LUNATIC", smallText)
+    TextRect.center = ((500),(400))
+    gameDisplay.blit(TextSurf, TextRect)
+
+    pygame.display.update()
+    clock.tick(60)
+
+#Player movement and speed
+x_player = display_height // 2
+y_player = display_width // 2
+speed_player = 5
+
+gameExit = False
+
+game_over = False
+
+restart = False
+
+time = 0
+
+#Collect Bullet Ready to add pattern
+x_bullet = list()
+y_bullet = list()
+x_bullet_speed = list()
+y_bullet_speed = list()
+bullet_color = list()
+
+x_bullet_type_2 = list()
+y_bullet_type_2 = list()
+x_bullet_type_2_speed = list()
+y_bullet_type_2_speed = list()
+bullet_type_2_color = list()
+
+x_bullet_type_3 = list()
+y_bullet_type_3 = list()
+x_bullet_type_3_speed = list()
+y_bullet_type_3_speed = list()
+bullet_type_3_color = list()
+
+x_yellow_enemie = list()
+y_yellow_enemie = list()
+
+x_green_enemie = list()
+y_green_enemie = list()
+
+x_red_enemie = list()
+y_red_enemie = list()
+
+x_blue_enemie = list()
+y_blue_enemie = list()
+
+yellow_time = 90
+green_time = 0
+
+bullet_time = 0
+
+#Running and drawing a whole game
